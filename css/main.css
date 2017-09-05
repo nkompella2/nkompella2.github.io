@@ -60,15 +60,16 @@ ul.posts li {
 
 .me {
     color: darkblue;
+    text-align: center;
 }
 
 .description {
     color: DarkMagenta;
-    font-size: 25px;
+    font-size: small;
     text-align: center;
-    
-    
 }
 
-
+.body1 {
+    background-color: lightblue;
+}
     
