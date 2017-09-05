@@ -24,7 +24,22 @@ h1 {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     text-align: center;
     color: black;
+    border-style: solid;
+    border-color: black;
 }
+
+h2 {
+    font-size: 40px;
+    color: darkblue;
+    border-style: double;
+    border-color: darkblue;
+    
+    
+    
+}
+
+
+
 p {
     font-size: 25px;
     
