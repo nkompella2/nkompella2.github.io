@@ -39,7 +39,6 @@ h2 {
 }
 
 
-
 p {
     font-size: 25px;
     
@@ -69,7 +68,10 @@ ul.posts li {
     text-align: center;
 }
 
-.body1 {
-    background-color: lightblue;
+.link {
+    text-align: center;
+    
 }
+
+
     
