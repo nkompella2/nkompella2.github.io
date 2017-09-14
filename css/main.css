@@ -66,11 +66,14 @@ ul.posts li {
     color: black;
     font-size: small;
     text-align: center;
-    border-style: ridge;
+    border-style: double;
     border-color: darkblue;
     position: relative;
-    left: 100px;
-    top: 200px;
+    left: 30px;
+    top: 75px;
+    font-family: "Apple Chancery" , cursive;
+    font-size: 10 px;
+       
 }
 
 .link {
