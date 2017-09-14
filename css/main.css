@@ -63,9 +63,14 @@ ul.posts li {
 }
 
 .description {
-    color: DarkMagenta;
+    color: black;
     font-size: small;
     text-align: center;
+    border-style: ridge;
+    border-color: darkblue;
+    position: relative;
+    left: 100px;
+    top: 200px;
 }
 
 .link {
