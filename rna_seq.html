@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://127.0.0.1:5434/ -->
+<html class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  
+  <script type="application/shiny-singletons"></script>
+  <script type="application/html-dependencies">json2[2014.02.04];jquery[1.12.4];shiny[1.0.3];font-awesome[4.7.0];datatables[1.10.5];datatables-bootstrap[1.10.5];bootstrap[3.3.7]</script>
+<script src="./rna_seq_files/json2-min.js.download"></script>
+<script src="./rna_seq_files/jquery.min.js.download"></script>
+<link href="./rna_seq_files/shiny.css" rel="stylesheet">
+<script src="./rna_seq_files/shiny.min.js.download"></script>
+<link href="./rna_seq_files/font-awesome.min.css" rel="stylesheet">
+<script src="./rna_seq_files/jquery.dataTables.min.js.download"></script>
+<link href="./rna_seq_files/dataTables.bootstrap.css" rel="stylesheet">
+<link href="./rna_seq_files/dataTables.extra.css" rel="stylesheet">
+<script src="./rna_seq_files/dataTables.bootstrap.js.download"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="./rna_seq_files/bootstrap.min.css" rel="stylesheet">
+<script src="./rna_seq_files/bootstrap.min.js.download"></script>
+<script src="./rna_seq_files/html5shiv.min.js.download"></script>
+<script src="./rna_seq_files/respond.min.js.download"></script>
+
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-2">
+        <div class="well">
+          <div id="input_options0" class="shiny-html-output shiny-bound-output"><div class="form-group shiny-input-container">
+  <label>Select the xxx.txt file</label>
+  <div class="input-group">
+    <label class="input-group-btn">
+      <span class="btn btn-default btn-file">
+        Browse...
+        <input id="file1" name="file1" type="file" style="display: none;" accept="text/plain,text/comma-separated-values,text/plain,.txt" class="shiny-bound-input">
+      </span>
+    </label>
+    <input type="text" class="form-control" placeholder="No file selected" readonly="readonly">
+  </div>
+  <div id="file1_progress" class="progress progress-striped active shiny-file-input-progress">
+    <div class="progress-bar"></div>
+  </div>
+</div></div>
+          <div id="input_options_logFC1" class="shiny-html-output shiny-bound-output"></div>
+          <div id="input_options_logFC2" class="shiny-html-output shiny-bound-output"></div>
+          <div id="input_options_logFC3" class="shiny-html-output shiny-bound-output"></div>
+          <div id="input_options_pvalue1" class="shiny-html-output shiny-bound-output"></div>
+          <div id="filetype" class="form-group shiny-input-radiogroup shiny-input-container shiny-bound-input">
+            <label class="control-label" for="filetype">Download File type:</label>
+            <div class="shiny-options-group">
+              <div class="radio">
+                <label>
+                  <input type="radio" name="filetype" value="csv" checked="checked">
+                  <span>csv</span>
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="filetype" value="tsv">
+                  <span>tsv</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <a id="downloadData" class="btn btn-default shiny-download-link  shiny-bound-output" href="http://127.0.0.1:5434/session/2dcd96e1dc00ac0f7afd1485ef393ca3/download/downloadData?w=" target="_blank" download="">
+            <i class="fa fa-download"></i>
+            Download
+          </a>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="tabbable">
+          <ul class="nav nav-tabs shiny-tab-input shiny-bound-input" id="dataset">
+            <li class="active">
+              <a href="http://127.0.0.1:5434/#tab-1399-1" data-toggle="tab" data-value="GeneTable_logFC">GeneTable</a>
+            </li>
+            <li>
+              <a href="http://127.0.0.1:5434/#tab-1399-2" data-toggle="tab" data-value="Bar Plot_logFC">logFC Bar Plot Zoom</a>
+            </li>
+            <li>
+              <a href="http://127.0.0.1:5434/#tab-1399-3" data-toggle="tab" data-value="Volcano Plot_logFC">logFC Volcano Plot</a>
+            </li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane active" data-value="GeneTable_logFC" id="tab-1399-1">
+              <div id="GeneTable_logFC" class="shiny-datatable-output shiny-bound-output"></div>
+            </div>
+            <div class="tab-pane" data-value="Bar Plot_logFC" id="tab-1399-2">
+              <div id="GeneBarGraph_logFC_zoom" class="shiny-plot-output shiny-bound-output" style="width: 100% ; height: 400px" data-click-id="plot_click" data-click-clip="TRUE" data-dblclick-id="plot_dblclick" data-dblclick-clip="TRUE" data-hover-id="plot_hover" data-hover-delay="300" data-hover-delay-type="debounce" data-hover-clip="TRUE" data-hover-null-outside="TRUE" data-brush-id="plot_brush" data-brush-fill="#9cf" data-brush-stroke="#036" data-brush-opacity="0.25" data-brush-delay="300" data-brush-delay-type="debounce" data-brush-clip="TRUE" data-brush-direction="xy" data-brush-reset-on-new="FALSE"></div>
+              <pre id="info" class="shiny-text-output noplaceholder shiny-bound-output"></pre>
+            </div>
+            <div class="tab-pane" data-value="Volcano Plot_logFC" id="tab-1399-3">
+              <div id="GeneVolcanoGraph_logFC" class="shiny-plot-output shiny-bound-output" style="width: 100% ; height: 400px"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 col-sm-offset-1">
+        <div class="well">
+          <div id="input_options_PositiveColor" class="shiny-html-output shiny-bound-output"></div>
+          <div id="input_options_NegativeColor" class="shiny-html-output shiny-bound-output"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</body></html>
