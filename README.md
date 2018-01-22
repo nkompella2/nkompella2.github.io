@@ -11,15 +11,15 @@ Markdown is a lightweight and easy-to-use syntax for styling your writing. It in
 ```markdown
 Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+# Features
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
+- Allows user to filter data based on different columns
+- Visulaize LogFC column into a bar graph
+- Volcano Plot
+- Represents Expressions Table
+- Creates Line Plot with Expressions Table data
+
 
 **Bold** and _Italic_ and `Code` text
 
